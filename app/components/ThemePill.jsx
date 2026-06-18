@@ -6,13 +6,11 @@ const PALETTE = [
   { bg: "#B8DCDE", text: "#1A4A50", border: "#9ECACC" }, // teal
   { bg: "#DAC8F0", text: "#3C2668", border: "#C8B4E0" }, // lilac
   { bg: "#F2DCBC", text: "#6B3E1C", border: "#E0CAAA" }, // peach
-  { bg: "#C4EACM", text: "#1A4830", border: "#ACDCBE" }, // mint
+  { bg: "#C4EACD", text: "#1A4830", border: "#ACDCBE" }, // mint
 ];
 
-function colorIndex(str) {
-  let h = 0;
-  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
-  return h % PALETTE.length;
+function colorIndex(index) {
+  return ((index % PALETTE.length) + PALETTE.length) % PALETTE.length;
 }
 
 export default function ThemePill({
@@ -20,8 +18,9 @@ export default function ThemePill({
   onRemove,
   animDelay = 0,
   className = "",
+  paletteIndex = 0,
 }) {
-  const { bg, text, border } = PALETTE[colorIndex(theme)];
+  const { bg, text, border } = PALETTE[colorIndex(paletteIndex)];
 
   return (
     <span

@@ -1,8 +1,7 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ── Google Fonts (loaded via next/font, vars wired in layout) ── */
-
-/* ── Background gradient ── */
 .garden-bg {
   background:
     radial-gradient(ellipse 65% 55% at 8%  5%,  rgba(213, 205, 242, 0.55) 0%, transparent 55%),

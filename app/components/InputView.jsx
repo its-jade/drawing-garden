@@ -75,7 +75,7 @@ export default function InputView({ themes, onAddThemes, onRemoveTheme }) {
         style={shaking ? { "--tw-ring-color": "transparent" } : {}}
       >
         <label className="block text-[10px] font-bold text-garden-muted tracking-[0.12em] uppercase mb-3">
-          Enter Ideas (One Per Line)
+          Enter Your Ideas (One Per Line)
         </label>
 
         <textarea
@@ -143,6 +143,7 @@ export default function InputView({ themes, onAddThemes, onRemoveTheme }) {
                 theme={theme}
                 onRemove={onRemoveTheme}
                 animDelay={i * 30}
+                paletteIndex={i}
                 className="group transition-all duration-200 ease-out hover:pr-8"
               />
             ))}

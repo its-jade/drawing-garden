@@ -110,7 +110,7 @@ export default function PromptView({ themes, onGoToInput }) {
               Today's Seed
             </span>
 
-            <ThemePill theme={seed} />
+            <ThemePill theme={seed} paletteIndex={themes.indexOf(seed)} />
           </div>
         </div>
       )}

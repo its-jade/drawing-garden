@@ -8,7 +8,7 @@ import PromptView from "./components/PromptView";
 const STORAGE_KEY = "drawing-garden-themes";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("input");
+  const [activeTab, setActiveTab] = useState("prompt");
   const [themes, setThemes] = useState([]);
   const [mounted, setMounted] = useState(false);
 
